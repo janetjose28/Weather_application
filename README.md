@@ -24,27 +24,16 @@ The app also dynamically changes the background image based on the weather descr
 
 ## Screenshots
 Here are some screenshots of the Weather App in action:
+*Dynamic Background based on Weather*
 
-<<<<<<< HEAD
+*Clear Sky*
 ![Weather App Screenshot 1](images/clearsky_ss.png)  
-*City Search & Weather Display*
-
+*Fog*
 ![Weather App Screenshot 2](images/fog_ss.png)  
-*Dynamic Background based on Weather*
-
+*lightrain*
  ![Weather App Screenshot 2](images/lightrain_ss.png)  
-
+*smoke*
  ![Weather App Screenshot 2](images/smoke_ss.png)  
-
-=======
-![Weather App Screenshot 1](images/screenshot1.png)  
-*City Search & Weather Display*
-
-![Weather App Screenshot 2](images/screenshot2.png)  
-*Dynamic Background based on Weather*
-
->>>>>>> 538ab735126fe30222292f78d466844d41639224
-> Please replace `images/screenshot1.png` and `images/screenshot2.png` with your actual screenshot filenames. You can store them in an `images/` folder within your repository.
 
 ## Installation
 
@@ -119,7 +108,3 @@ You can find the full source code and additional details on the [GitHub reposito
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 538ab735126fe30222292f78d466844d41639224
