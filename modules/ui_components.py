@@ -2,14 +2,13 @@ import streamlit as st
 
 def display_weather_data(weather_data):
     if weather_data:
-        st.write(f"### Weather in {weather_data['city']}")
-        st.write(f"🌡️**Temperature**: {weather_data['temperature']}°C")
-        st.write(f"🌧️**Humidity**: {weather_data['humidity']}%")
-        st.write(f"☁️**Condition**: {weather_data['condition']}")
-        st.write(f"🍃**Wind Speed**: {weather_data['wind_speed']} m/s")
+        st.write(f"**City:** {weather_data['name']}")
+        st.write(f"🌡️**Temperature:** {weather_data['main']['temp']}°C")
+        st.write(f"💧**Humidity:** {weather_data['main']['humidity']}%")
+        st.write(f"☁️**Weather:** {weather_data['weather'][0]['description']}")
+        st.write(f"🍃**Wind Speed:** {weather_data['wind']['speed']} m/s")
     else:
-        st.write("Sorry, unable to retrieve the weather data.")
-
+        st.error("Failed to fetch weather data. Please try again.")
+        
 def city_input():
-    city = st.text_input("Enter city name:", "")
-    return city
+    return st.text_input("Enter a city name", "")

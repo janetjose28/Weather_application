@@ -63,8 +63,11 @@ def set_background_image_based_on_weather(weather_description):
             "default": "assets/default.jpg"  # A fallback image
         }
 
+        # Normalize description to lowercase for uniform comparison
+        weather_description = weather_description.lower()
+
         # Get the corresponding image path based on the weather description
-        image_path = weather_images.get(weather_description.lower(), weather_images["default"])
+        image_path = weather_images.get(weather_description, weather_images["default"])
 
         # Check if the image exists
         try:
@@ -91,7 +94,10 @@ def main():
                 weather_data = get_weather(city)
 
                 # Get the weather description (ensure it's a valid key)
-                weather_description = weather_data.get("weather", [{}])[0].get("description", "").lower()
+                weather_description = weather_data.get("weather", [{}])[0].get("description", "")
+
+                # Debugging: Check what description is returned from the API
+                st.write("Weather Description:", weather_description)
 
                 # Set the background based on the weather description
                 set_background_image_based_on_weather(weather_description)
@@ -105,5 +111,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
